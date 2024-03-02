@@ -1,0 +1,5 @@
+- name: This playbook is to test the ping module
+  hosts: app 
+  tasks:
+  - name: This task is to test the ping module
+    ansible.builtin.ping:
