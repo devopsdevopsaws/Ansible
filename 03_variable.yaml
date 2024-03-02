@@ -1,0 +1,8 @@
+- name: This palybook is to test the variables
+  hosts: app
+  become: true 
+  tasks:
+  - name: This playbook is to test the variables
+    ansible.builtin.debug:
+      msg: My name is padma srikanth kakarla
+  
