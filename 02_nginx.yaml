@@ -1,0 +1,12 @@
+- name: This playbook is to install and start the nginx
+  hosts: app
+  become: true 
+  tasks:
+  - name: This task is to install the nginx using yum
+    ansible.builtin.yum:
+      name: nginx
+      state: latest
+  - name: This task is to start the nginx using service
+    ansible.builtin.service:
+      name: nginx
+      state: started
