@@ -1,0 +1,6 @@
+- name: This playbook is to test the ping module in the ansible
+  hosts: db 
+  become: yes
+  tasks:
+  - name: This task is to check db node is pingable or not
+    ansible.builtin.ping:
