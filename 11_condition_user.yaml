@@ -8,3 +8,7 @@
   - name: This taks is to print the output 
     ansible.builtin.debug:
       msg: output is {{out.rc}}
+  - name: Create a user
+    ansible.builtin.user:
+      name: roboshop
+    when: out.rc != 0
