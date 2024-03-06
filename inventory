@@ -1,2 +1,6 @@
 [db]
 db.padmasrikanth.shop
+
+[db:vars]
+db_username: mongodb
+db_pass: password
