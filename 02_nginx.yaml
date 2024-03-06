@@ -1,0 +1,12 @@
+- name: This playbook is to test the installation and starting the nginx
+  hosts: localhost
+  become: yes 
+  tasks:
+  - name: This task is to install the nginx
+    ansible.builtin.yum:
+      ame: mginx
+      state: latest
+  - name: This task is to start the nginx service
+    ansible.builtin.service:
+      name: mginx
+      state: started
