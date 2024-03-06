@@ -1,0 +1,13 @@
+- name: This playbook is to check the variables locally
+  hosts: db 
+  become: true
+  # declare variables at the play level
+  vars:
+    name: padma srikanth Kakarla
+    age: 34
+    place: banglore
+  tasks:
+  - name: This task is to display the variables at local 
+    ansible.builtin.debug:
+      msg: My name is "{{name}}", and My age is "{{age}}", and i stay in "{{place}}"
+    
