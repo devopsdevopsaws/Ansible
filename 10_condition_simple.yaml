@@ -2,7 +2,7 @@
   hosts: db 
   become: yes 
   vars: 
-    name: devops
+    name: devops1
   tasks:
   - name: This task is to execute when condition met 
     ansible.builtin.debug:
