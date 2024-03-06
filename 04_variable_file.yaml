@@ -1,0 +1,9 @@
+- name: This playbook is to call the variables from the file level
+  hosts: db 
+  become: true
+  vars_files:
+  - variable.yaml
+  tasks:
+  - name: This task is to display varibales from file
+    ansible.builtin.debug:
+      msg: My name is {{name}}, and My age is {{age}}, and i stay in {{place}}
