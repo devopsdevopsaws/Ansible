@@ -1,0 +1,15 @@
+- name: This playbook is to check the variables task level
+  hosts: db 
+  become: true
+  # declare variables at the play level
+  vars:
+    name: padma srikanth Kakarla
+    age: 34
+    place: banglore
+  tasks:
+  - name: This task is to display the variables at task level
+    vars:
+      name: lavith
+      school: smart kids    
+    ansible.builtin.debug:
+      msg: My name is {{name}}, and My age is {{age}}, and i stay in {{place}} amd going to school {{school}}
