@@ -1,0 +1,9 @@
+- name: This playbook is to create a user if it doesnt exist
+  hosts: db 
+  tasks: 
+  - name: This taks is to check the command 
+    ansible.builtin.command: id roboshop
+    register: out
+  - name: This taks is to print the output 
+    ansible.builtin.debug:
+      msg: output is {{output}}
