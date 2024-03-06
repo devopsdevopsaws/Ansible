@@ -4,6 +4,7 @@
   - name: This taks is to check the command 
     ansible.builtin.command: id roboshop
     register: out
+    ignore_errors: true
   - name: This taks is to print the output 
     ansible.builtin.debug:
       msg: output is {{output}}
