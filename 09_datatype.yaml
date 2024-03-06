@@ -1,0 +1,28 @@
+- name: This playbook is to demonstrate the datatypes
+  hosts: db 
+  become: true 
+  vars: 
+    name: padmasrikanth #string
+    age: 34 #int
+    ishuman: yes #boolean
+    skills: #list
+      devops
+      aws 
+      sap 
+    experience: #map
+      devops: 7
+      aws: 4
+      sap: 5
+  tasks:
+  - name: This task is to display string
+    ansible.builtin.debug:
+      msg: username is {{name}}
+  - name: This task is to display string
+    ansible.builtin.debug:
+      msg: age is {{age}}
+  - name: This task is to skills
+    ansible.builtin.debug:
+      msg: skils is {{skills}}
+  - name: This task is to get experience
+    ansible.builtin.debug:
+      msg: experience is {{experience}}
