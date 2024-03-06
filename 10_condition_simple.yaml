@@ -1,0 +1,10 @@
+- name: This playbook is to check the simple condition
+  hosts: db 
+  become: yes 
+  vars: 
+    name: devops
+  tasks:
+  - name: This task is to execute when condition met 
+    ansible.builtin.debug:
+      msg: name is {{name}}
+    when: name == "devops"
