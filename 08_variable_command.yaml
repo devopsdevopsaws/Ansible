@@ -1,0 +1,7 @@
+- name: This playbook is to call the variables from the command level
+  hosts: db 
+  become: true
+  tasks:
+  - name: This task is to display varibales from command levle
+    ansible.builtin.debug:
+      msg: My os user name is {{ansible_user}} and my os password is {{ansible_password}}
