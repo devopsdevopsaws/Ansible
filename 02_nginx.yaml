@@ -4,7 +4,7 @@
   tasks:
   - name: This task is to install the nginx
     ansible.builtin.yum:
-      ame: nginx
+      name: nginx
       state: latest
   - name: This task is to start the nginx service
     ansible.builtin.service:
