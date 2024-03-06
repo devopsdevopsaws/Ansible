@@ -9,5 +9,5 @@
   tasks:
   - name: This task is to display the variables at local 
     ansible.builtin.debug:
-      msg: My name is "{{name}}", and My age is "{{age}}", and i stay in "{{place}}"
+      msg: My name is {{name}}, and My age is {{age}}, and i stay in {{place}}
     
