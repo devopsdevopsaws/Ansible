@@ -1,6 +1,6 @@
 - name: This playbook is to test the installation and starting the nginx
   hosts: localhost
-  become: yes 
+  become: true 
   tasks:
   - name: This task is to install the nginx
     ansible.builtin.yum:
