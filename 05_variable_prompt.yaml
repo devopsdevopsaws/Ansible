@@ -1,0 +1,14 @@
+- name: This playbook is to call the variables from the prompt level
+  hosts: db 
+  become: true 
+  vars_prompt:
+  - name: username
+    prompt: What is your username?
+    private: false
+  - name: password
+    prompt: What is your password?
+    private: true
+  tasks:
+  - name: This task is to display varibales from prompt
+    ansible.builtin.debug:
+      msg: username is {{username}} and password is {{password}}
